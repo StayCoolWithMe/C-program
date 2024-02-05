@@ -2,6 +2,8 @@
 
 int main()
 {
+    int num2,num3;
     printf("Hello world");
-    anththing
+    int sum = num2 + num3;
+    
 } 
