@@ -13,9 +13,9 @@ int main() {
 
     do {
         printf("\nInput your transportation");
-        printf("\n1. Bike");
-        printf("\n2. Car");
-        printf("\n3. Bus");
+        printf("\n1.Bike");
+        printf("\n2.Car");
+        printf("\n3.Bus");
         printf("\nEnter your choice: ");
         scanf("%d", &choice);
 
@@ -41,7 +41,7 @@ int main() {
         scanf("%f", &distance);
         total += cost *(distance/100); 
 
-        printf("\nEnter your plan for this trip:\n1. Adventure\n2. Fast-ride\n3. Chill-ride\n");
+        printf("\nEnter your plan for this trip:\n1.Adventure\n2.Fast-ride\n3.Chill-ride\n");
         scanf("%d", &choice2);
 
         switch (choice2) 
