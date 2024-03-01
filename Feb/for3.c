@@ -7,7 +7,7 @@ int main()
   int quantity;
   int totalCost = 0;
   printf("Available rental option:\n"); 
-  for (int i = 0; i < numRentals; i++) 
+  for (int i = 0; i < numRentals; i++)
   {
     printf("%d.option $%d per unit \n", i + 1, rentalPrices[i]);
   }
