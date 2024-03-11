@@ -25,11 +25,11 @@ int main() {
                 printf("Student Register ID %d\n", ID[i]);
                 break;
             case 2:
-                for (int j = 0; j <= i; j++) {
-                    printf("Student Name: %s\n", name[j]);
-                    printf("Student Age: %d\n", age[j]);
-                    printf("Registered ID: %d\n", ID[j]);
-                    if (age[j] >= 18) {
+                for (int j = 0; i <= i; i++) {
+                    printf("Student Name: %s\n", name[i]);
+                    printf("Student Age: %d\n", age[i]);
+                    printf("Registered ID: %d\n", ID[i]);
+                    if (age[i] >= 18) {
                         printf("You are available to register\n\n");
                     } else {
                         printf("You are not available to register\n\n");
@@ -41,12 +41,12 @@ int main() {
                 scanf("%d", &searchID);
                 int searchID;
                 int found = 0;
-                for (int j = 0; j <= i; j++) {
-                    if (ID[j] == searchID) {
-                        printf("Student Name: %s\n", name[j]);
-                        printf("Student Age: %d\n", age[j]);
-                        printf("Registered ID: %d\n", ID[j]);
-                        if (age[j] >= 18) {
+                for (int i = 0; i<= i; i++) {
+                    if (ID[i] == searchID) {
+                        printf("Student Name: %s\n", name[i]);
+                        printf("Student Age: %d\n", age[i]);
+                        printf("Registered ID: %d\n", ID[i]);
+                        if (age[i] >= 18) {
                             printf("You are available to register\n\n");
                         } else {
                             printf("You are not available to register\n\n");
@@ -61,9 +61,7 @@ int main() {
                 break;
             default:
                 printf("Invalid option. Please enter 1, 2, or 3.\n");
-                i--; // To repeat the current iteration
-        }
+            
     }
 
-    return 0;
 }
