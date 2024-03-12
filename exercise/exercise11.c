@@ -52,7 +52,6 @@ int main() {
                 printf("ID %d not found.\n", searchID);
             }
             break;
-
         case 2:
          for(int i = 0; i < 3; i++)
              {
