@@ -31,10 +31,8 @@ int main() {
             int roomToCheckIn;
             printf("Enter room number to check-in: ");
             scanf("%d", &roomToCheckIn);
-
-    
             int guestIndex = -1;//dont know whether the room is occupied or not
-            for (int j = 1; j <= i; j++) {
+             for (int j = 1; j <=i ; j++) {
                 if (roomNumber[j] == roomToCheckIn) {
                     guestIndex = j;//to make sure the room is occupied
                     break;
@@ -54,7 +52,7 @@ int main() {
 
 
             int guestIndex = -1;
-            for (int j = 1; j <= i; j++) {
+             for (int j = 1; j <=i ; j++){
                 if (roomNumber[j] == roomToCheckOut) {
                     guestIndex = j;
                     break;
@@ -68,8 +66,8 @@ int main() {
             }
         } else if (choice == 4) {
             printf("Room Status:\n");
-            for (int j = 1; j <= i; j++) {
-                if (roomStatus[j] == 0) {
+           for (int j = 1; j <=i ; j++){
+                if (roomStatus[i] == 0) {
                     printf("%d - Vacant\n", roomNumber[j]);
                 } else {
                     printf("%d - Occupied\n", roomNumber[j]);
