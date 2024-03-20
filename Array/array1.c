@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-
+#include<stdalign.h>
 #define MAX_BOOKS 3
 #define MAX_TITLE_LENGTH 100
 int main()

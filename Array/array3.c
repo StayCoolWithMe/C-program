@@ -38,7 +38,8 @@ int main() {
 
         switch(choice) {
             case 1:
-                if(studentindex < studentnumber) {
+                if(studentindex < studentnumber)
+                 {
                     printf("Enter ID for student %d: ", currentstudent+1);
                     scanf("%d", &ID[currentstudent]);
                     printf("Enter the name to add for student %d: ", currentstudent+1);
