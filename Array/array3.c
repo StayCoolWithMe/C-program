@@ -38,27 +38,27 @@ int main() {
 
         switch(choice) {
             case 1:
-                if(studentindex < studentnumber)
+                if(currentstudent < studentnumber)
                  {
                     printf("Enter ID for student %d: ", currentstudent+1);
                     scanf("%d", &ID[currentstudent]);
                     printf("Enter the name to add for student %d: ", currentstudent+1);
-                    scanf("%s", name[studentindex]);
-                    studentindex++;
+                    scanf("%s", name[currentstudent]);
+                    currentstudent++;
                 } else {
                     printf("Maximum number of students reached.\n");
                 }
                 break;
 
             case 2:
-                if(studentindex > 0) {
+                if(currentstudent > 0) {
                     int removestudent;
-                    printf("Enter the student number to remove (1-%d): ", studentindex);
+                    printf("Enter the student number to remove (1-%d): ", currentstudent);
                     scanf("%d", &removestudent);
-                    if(removestudent > 0 && removestudent <= studentindex) {
-                        for(int i = removestudent-1; i < studentindex-1; i++) {
+                    if(removestudent > 0 && removestudent <= currentstudent) {
+                        for(int i = removestudent-1; i < currentstudent-1; i++) {
                             strcpy(name[i], name[i+1]);
-                            studentindex--;
+                            currentstudent--;
                         }
                         printf("Student removed successfully.\n");
                     } else {
