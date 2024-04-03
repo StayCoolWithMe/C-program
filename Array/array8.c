@@ -11,7 +11,7 @@ int main()
     int choice;
     int currentstudent=0;
     int studentnumber=0;
-    float average[Max_Student];
+    float average;
     printf("Enter student number");
     scanf("%d",&studentnumber);
     while(studentnumber<1 ||  studentnumber>Max_Student)
@@ -33,29 +33,46 @@ int main()
         {
             if(currentstudent<studentnumber)
             {
+                    for(int i=0;i<studentnumber;i++)
+                    {
+                            printf("Enter name for student %d", currentstudent+1);
+                            scanf("%s", name[currentstudent]);
+                            printf("Enter math grade for student %d(1-100)", currentstudent+1);
+                            scanf("%d",&math[currentstudent]);
+                            printf("Enter english grade for student %d(1-100)", currentstudent+1);
+                            scanf("%d",&english[currentstudent]);
+                            printf("Enter science grade for student %d(1-100)", currentstudent+1);
+                            scanf("%d",&science[currentstudent]);
+                        if(math[currentstudent]>100 || science[currentstudent]>100 || english[currentstudent]>100 )
+                        {
+                            printf("UNVALID AMOUNT OF DATA,PLEASE ENTER A MATCHABLE ONE\n");
+                            printf("Enter math grade for student %d(1-100)", currentstudent+1);
+                            scanf("%d",&math[currentstudent]);
+                            printf("Enter english grade for student %d(1-100)", currentstudent+1);
+                            scanf("%d",&english[currentstudent]);
+                            printf("Enter science grade for student %d(1-100)", currentstudent+1);
+                            scanf("%d",&science[currentstudent]);
+                        }
+                        else{
+                            printf("Thank you for your input\n");
+                        }
+                        i++;
+                    }
 
-                printf("Enter name for student %d", currentstudent+1);
-                scanf("%s", name[currentstudent]);
-                printf("Enter math grade for student %d", currentstudent+1);
-                scanf("%d",&math[currentstudent]);
-                printf("Enter english grade for student %d", currentstudent+1);
-                scanf("%d",&english[currentstudent]);
-                printf("Enter science grade for student %d", currentstudent+1);
-                scanf("%d",&science[currentstudent]);
-                currentstudent++;
             }
             else
-            {
+                {
                 printf("Student reach\n");
-            }
+                }
+                currentstudent++;
         break;
         }
         case 2:
         {
                 for(int i=0;i<currentstudent;i++)
                 {
-                average[currentstudent]=(math[i]+science[i]+english[i])/3;
-                printf("Average score for student %d will be %.1f\n\n",i+1,average[currentstudent]);
+                average=(math[i]+science[i]+english[i])/3;
+                printf("Average score for student %d will be %.1f\n\n",i+1,average);
                 }
          break;
         }
@@ -63,15 +80,16 @@ int main()
         {
             for(int i=0;i<currentstudent;i++)
             {
-             average[currentstudent]=(math[i]+science[i]+english[i])/3;
-            if(average[currentstudent]>=60)
+             average=(math[i]+science[i]+english[i])/3;
+            if(average>=60)
             {
-                printf("CONGRATULATION !! YOU HAVE PASSED\n");
+                printf("CONGRATULATION student %d !! YOU HAVE PASSED\n",i+1);
             
             }
             else{
-                printf("YOU HAVE FAILED\n");
+                printf("Student %d YOU HAVE FAILED\n",i+1);
             }
+            
             }
         break;
         }
