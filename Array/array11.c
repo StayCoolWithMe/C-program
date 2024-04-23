@@ -11,13 +11,13 @@ int main() {
     float duration[Max_car];
     float price[Max_car];
     char *availableEngines[] = {"Toyota", "Hyundai", "Lexus"};
-    float enginePrices[] = {20, 30, 40};
+    float enginePrices[] = {20, 30, 40};//put all the price in here
     int currentCustomer = 0;
     int totalCar = 0;
     int customerNumber = 0;
     int choice;
     int ID[Max_car];
-    int carstatus[Max_car] = {0}; // Initialize all elements to 0
+    int carstatus[Max_car] = {0}; 
 
     printf("Enter the number of customers waiting in line (1-20): ");
     scanf("%d", &customerNumber);
@@ -52,19 +52,23 @@ int main() {
                     printf("Enter the car ID(1-20): ");
                     scanf("%d", &ID[currentCustomer]);
 
-                    int engineIndex = -1;
-                    for (int i = 0; i < 3; i++) {
-                        if (strcmp(engine[currentCustomer], availableEngines[i]) == 0) {
-                            engineIndex = i;
+                    int engineIndex = -1;//the purpose of this whole for code is to finding a valueble in the array
+                    for (int i = 0; i < 3; i++) 
+                    {
+                        if (strcmp(engine[currentCustomer], availableEngines[i]) == 0) 
+ //this condition want to check if the engine selected by the user has it value in the available engine
+                        {
+                            engineIndex = i;// if it has then the engine index set to i
                             break;
                         }
                     }
 
-                    if (engineIndex != -1) {
+                    if (engineIndex != -1) //this condition check if a matching engine is found
+                    {
                         printf("%s is available at $%.0f/day.\n", availableEngines[engineIndex], enginePrices[engineIndex]);
                         price[currentCustomer] = enginePrices[engineIndex] * duration[currentCustomer];
                         printf("Total cost: $%.2f\n", price[currentCustomer]);
-                        carstatus[ID[currentCustomer]] = 1; // Update car status
+                        carstatus[ID[currentCustomer]] = 1; 
                     } else {
                         printf("Sorry, the requested car is not available.\n");
                     }
@@ -81,12 +85,13 @@ int main() {
                 int checkincar;
                 printf("Enter the car ID to check in: ");
                 scanf("%d", &checkincar);
-                if (checkincar > 0 && checkincar <= Max_car) {
+                if (checkincar > 0 && checkincar <= Max_car) 
+                {
                     if (carstatus[checkincar] == 0) {
                         carstatus[checkincar] = 1; // Update car status
                         printf("Car ID %d has been successfully checked in.\n", checkincar);
                     } else {
-                        printf("Car ID %d is already checked in.\n", checkincar);
+                        printf("Car ID %d is already been checked in.\n", checkincar);
                     }
                 } else {
                     printf("Invalid car ID.\n");
@@ -111,7 +116,8 @@ int main() {
             }
             break;
 
-            case 4: {
+            case 4: 
+            {
                 int carIDToCheck;
                 printf("Enter the car ID to check: ");
                 scanf("%d", &carIDToCheck);
@@ -137,7 +143,7 @@ int main() {
         }
     } while (choice != 5);
 
-    return 0;
+    
 }
 
 
