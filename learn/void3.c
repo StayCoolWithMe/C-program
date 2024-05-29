@@ -25,7 +25,8 @@ int quantity;
     int num2;
     int result;
 
-int main() {
+int main() 
+{
     input(); 
     output(); 
     delete_order();
@@ -53,6 +54,10 @@ void input() {
         printf("What is your preferred drink (Coffee, Tea, Milkshake)? ");
         scanf("%s", choice);
 
+
+
+    //this version of camparing is much safer and effient but take more effort
+    //this version is efficient for extra safe 
         int index = -1;
         for (int i = 0; i < 3; i++) {
             if (strcmp(choice, availabledrink[i]) == 0) {
