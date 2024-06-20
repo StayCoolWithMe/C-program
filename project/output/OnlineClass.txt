@@ -1,0 +1,5 @@
+Name    ID      Enrolled Course
+Duck	19705	Statistics
+Quack	24891	Math
+Pig	    20449	English
+Bruh	27474	Math

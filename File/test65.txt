@@ -1,0 +1,3 @@
+Name                        ID              Age         Mat         Eng         Ph          Overll
+dont                		17501     		30   		30   		40   		50   		40.00
+Wert                		17713     		30   		30   		40   		50   		40.00
