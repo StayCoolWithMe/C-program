@@ -73,6 +73,7 @@ int main()
     } 
     }
 }
+*
 void Register()
 {
     while(1)
@@ -171,6 +172,7 @@ void Activity() {
         ActivityIndex++;  
     }
 }
+
 void View()
 {
     
